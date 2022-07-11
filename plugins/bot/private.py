@@ -1,17 +1,14 @@
 """
 RadioPlayerV3, Telegram Voice Chat Bot
-Copyright (c) 2021  Asm Safone <https://github.com/AsmSafone>
-
+Copyright (c) 2021  Asm Safone <https://github.com/DrM4soudHK>
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
-
 This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU Affero General Public License for more details.
-
 You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>
 """
@@ -32,20 +29,15 @@ LOG_GROUP=Config.LOG_GROUP
 HOME_TEXT = "👋🏻 **Hi [{}](tg://user?id={})**,\n\nI'm **Radio Player V3.0** \nI Can Play Radio / Music / YouTube Live In Channel & Group 24x7 Nonstop. Made with ❤️ By @DrM4soudHK 😉!"
 HELP_TEXT = """
 💡 --**Setting Up**--:
-
 \u2022 Add the bot and user account in your group with admin rights.
 \u2022 Start a voice chat in your group & restart the bot if not joined to vc.
 \u2022 Use /play [song name] or use /play as a reply to an audio file or youtube link.
-
 💡 --**Common Commands**--:
-
 \u2022 `/help` - shows help for all commands
 \u2022 `/song` [song name] - download the song as audio
 \u2022 `/current` - shows current track with controls
 \u2022 `/playlist` - shows the current & queued playlist
-
 💡 --**Admins Commands**--:
-
 \u2022 `/radio` - start radio stream
 \u2022 `/stopradio` - stop radio stream
 \u2022 `/skip` - skip current music
@@ -61,8 +53,9 @@ HELP_TEXT = """
 \u2022 `/unmute` - unmute the vc userbot
 \u2022 `/restart` - update & restart the bot
 \u2022 `/setvar` - set/change heroku configs
-
-
+© **Powered By** : 
+**@DrM4soudHK | @DrM4soudHK** 👑
+"""
 
 
 @Client.on_callback_query()
@@ -195,8 +188,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton("SEARCH SONGS INLINE", switch_inline_query_current_chat=""),
             ],
             [
-                InlineKeyboardButton("Power By", url="https://t.me/DrM4soudHK"),
-                InlineKeyboardButton("mirror bot", url="https://t.me/Mirror1eechbot"),
+                InlineKeyboardButton("CHANNEL", url="https://t.me/DrM4soudHK"),
+                InlineKeyboardButton("SUPPORT", url="https://t.me/DrM4soudHK"),
+            ],
+            [
+                InlineKeyboardButton("MORE BOTS", url="https://t.me/DrM4soudHK/173"),
+                InlineKeyboardButton("SOURCE CODE", url="https://github.com/DrM4soudHK/RadioPlayerV3"),
             ],
             [
                 InlineKeyboardButton("BACK HOME", callback_data="home"),
@@ -218,8 +215,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton("SEARCH SONGS INLINE", switch_inline_query_current_chat=""),
             ],
             [
-                InlineKeyboardButton("Power By", url="https://t.me/DrM4soudHK"),
-                InlineKeyboardButton("mirror bot", url="https://t.me/Mirror1eechbot"),
+                InlineKeyboardButton("CHANNEL", url="https://t.me/DrM4soudHK"),
+                InlineKeyboardButton("SUPPORT", url="https://t.me/DrM4soudHK"),
+            ],
+            [
+                InlineKeyboardButton("MORE BOTS", url="https://t.me/DrM4soudHK"),
+                InlineKeyboardButton("SOURCE CODE", url="https://github.com/nasoudfg/RadioPlayerV3"),
             ],
             [
                 InlineKeyboardButton("❔ HOW TO USE ❔", callback_data="help"),
@@ -252,8 +253,12 @@ async def start(client, message):
                 InlineKeyboardButton("SEARCH SONGS INLINE", switch_inline_query_current_chat=""),
             ],
             [
-                InlineKeyboardButton("Power By", url="https://t.me/DrM4soudHK"),
-                InlineKeyboardButton("mirror bot", url="https://t.me/Mirror1eechbot"),
+                InlineKeyboardButton("CHANNEL", url="https://t.me/DrM4soudHK"),
+                InlineKeyboardButton("SUPPORT", url="https://t.me/DrM4soudHK"),
+            ],
+            [
+                InlineKeyboardButton("MORE BOTS", url="https://t.me/DrM4soudHK/173"),
+                InlineKeyboardButton("SOURCE CODE", url="https://github.com/DrM4soudHK/RadioPlayerV3"),
             ],
             [
                 InlineKeyboardButton("❔ HOW TO USE ❔", callback_data="help"),
@@ -272,8 +277,12 @@ async def help(client, message):
                 InlineKeyboardButton("SEARCH SONGS INLINE", switch_inline_query_current_chat=""),
             ],
             [
-                InlineKeyboardButton("Power By", url="https://t.me/DrM4soudHK"),
-                InlineKeyboardButton("mirror bot", url="https://t.me/Mirror1eechbot"),
+                InlineKeyboardButton("CHANNEL", url="https://t.me/DrM4soudHK"),
+                InlineKeyboardButton("SUPPORT", url="https://t.me/DrM4soudHK"),
+            ],
+            [
+                InlineKeyboardButton("MORE BOTS", url="https://t.me/DrM4soudHK/173"),
+                InlineKeyboardButton("SOURCE CODE", url="https://github.com/DrM4soudHK/RadioPlayerV3"),
             ],
             [
                 InlineKeyboardButton("BACK HOME", callback_data="home"),
@@ -283,7 +292,7 @@ async def help(client, message):
     reply_markup = InlineKeyboardMarkup(buttons)
     if msg.get('help') is not None:
         await msg['help'].delete()
-    msg['help'] = await message.reply_photo(photo="https://s6.uupload.ir/files/untitled-1_g44s.png", caption=HELP_TEXT, reply_markup=reply_markup)
+    msg['help'] = await message.reply_photo(photo="https://telegra.ph/file/4e839766d45935998e9c6.jpg", caption=HELP_TEXT, reply_markup=reply_markup)
     await mp.delete(message)
 
 
