@@ -182,11 +182,11 @@ async def restart(_, message: Message):
             target=stop_and_restart()
             ).start()
     try:
-        await k.edit("✅ **Restarted Successfully! \nJoin @AsmSafone For Update!**")
+        await k.edit("✅ **Restarted Successfully!")
         await k.reply_to_message.delete()
     except:
         pass
 
 idle()
-print("\n\nRadio Player Bot Stopped, Join @AsmSafone!")
+print("\n\nRadio Player Bot Stopped,")
 bot.stop()
